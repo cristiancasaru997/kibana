@@ -227,8 +227,8 @@ x-pack/test/functional_with_es_ssl/apps/triggers_actions_ui @elastic/kibana-aler
 x-pack/test/functional_with_es_ssl/fixtures/plugins/alerts @elastic/kibana-alerting-services
 
 # @elastic/kibana-reporting
-/x-pack/legacy/plugins/reporting @elastic/kibana-reporting
-/x-pack/plugins/reporting @elastic/kibana-reporting
+x-pack/legacy/plugins/reporting @elastic/kibana-reporting
+x-pack/plugins/reporting @elastic/kibana-reporting
 
 # @elastic/code
 x-pack/plugins/code/ @elastic/code
@@ -237,8 +237,8 @@ x-pack/plugins/code/ @elastic/code
 x-pack/plugins/logstash @elastic/logstash
 
 # @elastic/app-search-frontend
-/x-pack/plugins/enterprise_search/ @elastic/app-search-frontend
-/x-pack/test/functional_enterprise_search/ @elastic/app-search-frontend
+x-pack/plugins/enterprise_search/ @elastic/app-search-frontend
+x-pack/test/functional_enterprise_search/ @elastic/app-search-frontend
 
 # @elastic/workplace-search-frontend
 x-pack/plugins/enterprise_search/ @elastic/workplace-search-frontend
@@ -304,23 +304,23 @@ x-pack/plugins/security_solution/server/lib/detection_engine/rules/prepackaged_r
 **/*.scss @elastic/kibana-design
 
 # @elastic/kibana-core-ui-designers
-/src/plugins/dashboard/**/*.scss @elastic/kibana-core-ui-designers
-/x-pack/plugins/canvas/**/*.scss @elastic/kibana-core-ui-designers
-/src/legacy/core_plugins/kibana/public/home/**/*.scss @elastic/kibana-core-ui-designers
-/x-pack/legacy/plugins/security/**/*.scss @elastic/kibana-core-ui-designers
-/x-pack/legacy/plugins/spaces/**/*.scss @elastic/kibana-core-ui-designers
-/x-pack/plugins/spaces/**/*.scss @elastic/kibana-core-ui-designers
-/x-pack/plugins/security/**/*.scss @elastic/kibana-core-ui-designers
+src/plugins/dashboard/**/*.scss @elastic/kibana-core-ui-designers
+x-pack/plugins/canvas/**/*.scss @elastic/kibana-core-ui-designers
+src/legacy/core_plugins/kibana/public/home/**/*.scss @elastic/kibana-core-ui-designers
+x-pack/legacy/plugins/security/**/*.scss @elastic/kibana-core-ui-designers
+x-pack/legacy/plugins/spaces/**/*.scss @elastic/kibana-core-ui-designers
+x-pack/plugins/spaces/**/*.scss @elastic/kibana-core-ui-designers
+x-pack/plugins/security/**/*.scss @elastic/kibana-core-ui-designers
 
 # @elastic/observability-design
-/x-pack/plugins/apm/**/*.scss @elastic/observability-design
-/x-pack/plugins/infra/**/*.scss @elastic/observability-design
-/x-pack/plugins/ingest_manager/**/*.scss @elastic/observability-design
-/x-pack/plugins/observability/**/*.scss @elastic/observability-design
+x-pack/plugins/apm/**/*.scss @elastic/observability-design
+x-pack/plugins/infra/**/*.scss @elastic/observability-design
+x-pack/plugins/ingest_manager/**/*.scss @elastic/observability-design
+x-pack/plugins/observability/**/*.scss @elastic/observability-design
 
 # @elastic/ent-search-design
-/x-pack/plugins/enterprise_search/**/*.scss @elastic/ent-search-design
+x-pack/plugins/enterprise_search/**/*.scss @elastic/ent-search-design
 
 # @elastic/security-design
-/x-pack/plugins/endpoint/**/*.scss @elastic/security-design
-/x-pack/plugins/security_solution/**/*.scss @elastic/security-design
+x-pack/plugins/endpoint/**/*.scss @elastic/security-design
+x-pack/plugins/security_solution/**/*.scss @elastic/security-design

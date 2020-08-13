@@ -20,6 +20,7 @@
 import * as Either from './either';
 import { fromNullable } from './maybe';
 import { always, id, noop } from './utils';
+import { getData } from './team_assignment/get_data';
 
 const maybeTotal = (x) => (x === 'total' ? Either.left(x) : Either.right(x));
 
@@ -97,6 +98,18 @@ export const coveredFilePath = (obj) => {
     .fold(withoutCoveredFilePath, (coveredFilePath) => ({ ...obj, coveredFilePath }));
 };
 
+export const teamAssignment = (teamAssignmentsPath) => (obj) => {
+  const { coveredFilePath } = obj;
+
+  const team = getData(teamAssignmentsPath)
+    .match(new RegExp(`${coveredFilePath}.*$`, 'gm'))[0]
+    .match(/.+\s{1,3}(.+)$/, 'gm')[1];
+
+  return {
+    team,
+    ...obj,
+  };
+};
 export const ciRunUrl = (obj) =>
   Either.fromNullable(process.env.CI_RUN_URL).fold(always(obj), (ciRunUrl) => ({
     ...obj,
@@ -132,7 +145,6 @@ export const itemizeVcs = (vcsInfo) => (obj) => {
     ? `${comparePrefix()}/${process.env.FETCHED_PREVIOUS}...${sha}`
     : 'PREVIOUS SHA NOT PROVIDED';
 
-  // const withoutPreviousL = always({ ...obj, vcs });
   const withPreviousR = () => ({
     ...obj,
     vcs: {
